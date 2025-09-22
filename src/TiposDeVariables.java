@@ -50,6 +50,12 @@ public class TiposDeVariables {
         // Declara una variable con el número de V-Bucks que tiene un jugador.
         // Resta el precio de una skin (ej: 1200).
         // Imprime el resultado: "Después de comprar la skin, te quedan X V-Bucks".
+        String dineroJugador = "5000";
+        int dinero = 5000;
+        int skin = 1200;
+        int compra = dinero - skin;
+        System.out.println("El jugador tiene " + dineroJugador + " V-Bucks" +
+                "\nDespués de comprar la skin, le quedan " + compra + " V-Bucks");
 
 
         // ==============================

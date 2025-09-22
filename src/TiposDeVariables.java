@@ -16,6 +16,15 @@ public class TiposDeVariables {
         // ==============================
         // Crea variables con el nombre del jugador, nivel, vida (double)
         // y si tiene armadura (boolean). Imprímelas como si fuese una ficha del jugador.
+        String nombreJugador = "Iker";
+        long nivel = 500000;
+        double vida = 20.0;
+        boolean armadura = true;
+        System.out.println("El Nombre del Jugador es: " + nombreJugador +
+                "\nSu nivel es: " + nivel +
+                "\nSu vida es: " + vida +
+                "\nTiene armadura? " + armadura);
+
 
 
         // ==============================
@@ -24,6 +33,15 @@ public class TiposDeVariables {
         // Declara dos variables con el ataque de Pikachu y la defensa de Charmander.
         // Calcula el daño causado (ataque – defensa).
         // Imprime el resultado: "Pikachu hace X puntos de daño a Charmander" - X es el valor real del daño.
+        String ataquePikachu = "rayo";
+        String ataqueCharmander = "defensa férrea";
+        int dañoPikachu = 50;
+        int defensaCharmander = 30;
+        int dañoCausado = dañoPikachu - defensaCharmander;
+        System.out.println("Pikachu usa " + ataquePikachu +
+                "\nCharmander usa " + ataqueCharmander +
+                "\nPikachu hace " + dañoCausado + " puntos de daño a Charmander");
+
 
 
         // ==============================

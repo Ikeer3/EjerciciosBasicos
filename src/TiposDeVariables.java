@@ -93,8 +93,8 @@ public class TiposDeVariables {
         // OPCIONAL: muestra también el tier en el que quedaría (Bronce, Plata, Oro, Platino…).
 
 
-        int numeroKills = 7;
-        int numeroMuertes = 4;
+        int numeroKills = 10;
+        int numeroMuertes = 5;
         int numeroAsistencias = 5;
         int KDA = numeroKills + numeroAsistencias / numeroMuertes;
         if (KDA >= 5) {

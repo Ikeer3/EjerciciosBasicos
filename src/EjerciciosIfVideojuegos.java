@@ -22,15 +22,15 @@ public class EjerciciosIfVideojuegos {
 
         //   Vida < 30 → "Tu personaje está en peligro ⚠️"
 
-        int vidaJugador = 100;
+        int vidaJugador = 50;
         if (vidaJugador > 70) {
-            System.out.println("Tu personaje está fuerte");
+            System.out.println("Tu personaje está fuerte \uD83D\uDCAA");
         } else if  (vidaJugador >= 30 &&  vidaJugador <= 70) {
-            System.out.println("Tu personaje está herido");
+            System.out.println("Tu personaje está herido \uD83D\uDE22");
         } else
-            System.out.println("Tu personaje está en peligro");
+            System.out.println("Tu personaje está en peligro ⚠\uFE0F");
 
-        
+
 
         // ==============================
 
@@ -40,7 +40,7 @@ public class EjerciciosIfVideojuegos {
 
         // Declara una variable con el tipo de ataque: "fuego", "agua" o "planta".
 
-        // Con if/else if/else imprime:
+        // Con if/else imprime:
 
         //   Si es fuego → "¡Es super eficaz contra planta!"
 
@@ -50,7 +50,15 @@ public class EjerciciosIfVideojuegos {
 
         //   Otro caso → "Tipo de ataque no reconocido"
 
-
+        String ataqueFuego = "lanzallamas";
+        String ataqueAgua = "hidrobomba";
+        String ataquePlanta ="latigo cepa";
+        if (ataqueFuego == "lanzallamas") {
+            System.out.println("¡Es super eficaz contra planta!");
+        } else if (ataqueAgua == "hidrobomba") {
+            System.out.println("¡Es super eficaz contra fuego!");
+        } else if (ataquePlanta == "latigo cepa") {}
+            System.out.println("¡Es super eficaz contra agua!");
 
 
 

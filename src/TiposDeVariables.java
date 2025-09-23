@@ -92,5 +92,18 @@ public class TiposDeVariables {
         //
         // OPCIONAL: muestra también el tier en el que quedaría (Bronce, Plata, Oro, Platino…).
 
+
+        int numeroKills = 7;
+        int numeroMuertes = 4;
+        int numeroAsistencias = 5;
+        int KDA = numeroKills + numeroAsistencias / numeroMuertes;
+        if (KDA >= 5) {
+            System.out.println("Jugador PRO");
+        } else if (KDA >= 3 && KDA < 5) {
+            System.out.println("Jugador BUENO");
+        } else if (KDA >= 1 && KDA < 3) {
+            System.out.println("Jugador NORMAL");
+        } else
+            System.out.println("Jugador NOOB");
     }
 }

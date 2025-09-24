@@ -61,6 +61,7 @@ public class EjerciciosIfVideojuegos {
             System.out.println("Tipo de ataque no reconocido");
 
 
+
         // ==============================
 
         // EJERCICIO 3 – Tienda de objetos (Fortnite)
@@ -79,9 +80,17 @@ public class EjerciciosIfVideojuegos {
 
         //   Si tiene menos de 800 → "No tienes suficientes V-Bucks"
 
+        int numeroBucks = 5000;
+        if (numeroBucks >= 2000) {
+            System.out.println("Puedes comprar una skin legendaria");
+        } else if  (numeroBucks >= 1200) {
+            System.out.println("Puedes comprar una skin épica");
+        } else if (numeroBucks >= 800) {
+            System.out.println("Puedes comprar una skin rara");
+        } else
+            System.out.println("No tienes suficientes V-Bucks");
 
-
-
+        
 
         // ==============================
 

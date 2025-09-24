@@ -50,16 +50,15 @@ public class EjerciciosIfVideojuegos {
 
         //   Otro caso → "Tipo de ataque no reconocido"
 
-        String ataqueFuego = "lanzallamas";
-        String ataqueAgua = "hidrobomba";
-        String ataquePlanta ="latigo cepa";
-        if (ataqueFuego == "lanzallamas") {
+        String tipoAtaque = "fuego";
+        if (tipoAtaque == "fuego") {
             System.out.println("¡Es super eficaz contra planta!");
-        } else if (ataqueAgua == "hidrobomba") {
+        } else if (tipoAtaque == "agua") {
             System.out.println("¡Es super eficaz contra fuego!");
-        } else if (ataquePlanta == "latigo cepa") {}
+        } else if (tipoAtaque == "planta") {
             System.out.println("¡Es super eficaz contra agua!");
-
+        } else
+            System.out.println("Tipo de ataque no reconocido");
 
 
         // ==============================

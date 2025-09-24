@@ -90,7 +90,7 @@ public class EjerciciosIfVideojuegos {
         } else
             System.out.println("No tienes suficientes V-Bucks");
 
-        
+
 
         // ==============================
 
@@ -110,7 +110,15 @@ public class EjerciciosIfVideojuegos {
 
         //   3000 o más → "Platino"
 
-
+        int puntosRanking = 3000;
+        if (puntosRanking >= 0 &&  puntosRanking < 1000) {
+            System.out.println("Tu rango es Bronce");
+        }  else if (puntosRanking >= 1000 &&  puntosRanking < 2000) {
+            System.out.println("Tu rango es Plata");
+        } else if (puntosRanking >= 2000 &&  puntosRanking < 3000) {
+            System.out.println("Tu rango es Oro");
+        } else
+            System.out.println("Tu rango es Platino");
 
 
 

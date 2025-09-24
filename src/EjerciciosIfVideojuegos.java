@@ -132,14 +132,24 @@ public class EjerciciosIfVideojuegos {
 
         // Con if imprime:
 
+        //   Entre 0 y 5 → "Madrugada, mejor dormir 😴"
+
         //   Entre 6 y 11 → "Es de mañana, los aldeanos están activos ☀️"
 
         //   Entre 12 y 18 → "Es de tarde, hora de explorar 🔍"
 
         //   Entre 19 y 23 → "Es de noche, cuidado con los mobs 🌙"
 
-        //   Entre 0 y 5 → "Madrugada, mejor dormir 😴"
-
+        short hora = 15;
+        if (hora >= 0 && hora <= 5) {
+            System.out.println("Madrugada, mejor dormir \uD83D\uDE34");
+        } else if  (hora >= 6 && hora <= 11) {
+            System.out.println("Es de mañana, los aldeanos están activos ☀\uFE0F");
+        } else  if  (hora >= 12 && hora <= 18) {
+            System.out.println("Es de tarde, hora de explorar \uD83D\uDD0D");
+        } else  if  (hora >= 19 && hora <= 23) {
+            System.out.println("Es de noche, cuidado con los mobs 🌙");
+        }
 
 
 

@@ -26,7 +26,6 @@ public class TiposDeVariables {
                 "\nTiene armadura? " + armadura);
 
 
-
         // ==============================
         // EJERCICIO 2 – Batalla rápida (Pokémon)
         // ==============================
@@ -41,7 +40,6 @@ public class TiposDeVariables {
         System.out.println("Pikachu usa " + ataquePikachu +
                 "\nCharmander usa " + ataqueCharmander +
                 "\nPikachu hace " + dañoCausado + " puntos de daño a Charmander");
-
 
 
         // ==============================
@@ -103,16 +101,24 @@ public class TiposDeVariables {
 
 
         int numeroKills = 10;
-        int numeroMuertes = 5;
-        int numeroAsistencias = 5;
-        int KDA = numeroKills + numeroAsistencias / numeroMuertes;
+        int numeroMuertes = 4;
+        int numeroAsistencias = 2;
+        int KDA = (numeroKills + numeroAsistencias) / numeroMuertes;
         if (KDA >= 5) {
-            System.out.println("Jugador PRO");
-        } else if (KDA >= 3 && KDA < 5) {
-            System.out.println("Jugador BUENO");
-        } else if (KDA >= 1 && KDA < 3) {
-            System.out.println("Jugador NORMAL");
+            System.out.println("Jugador PRO y ");
+        } else if (KDA >= 3) {
+            System.out.println("Jugador BUENO y ");
+        } else if (KDA >= 1) {
+            System.out.println("Jugador NORMAL y ");
         } else
-            System.out.println("Jugador NOOB");
+            System.out.println("Jugador NOOB y ");
+        if (KDA >= 5) {
+            System.out.println("Tier Platino");
+        } else if (KDA >= 3) {
+            System.out.println("Tier Oro");
+        } else if (KDA >= 1) {
+            System.out.println("Tier Plata");
+        } else
+            System.out.println("Tier Bronce");
     }
 }

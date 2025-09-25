@@ -65,7 +65,9 @@ public class TiposDeVariables {
         // y otra con un buff de velocidad.
         // Calcula la velocidad final sumando ambos valores.
         // Imprime el resultado: "La velocidad final de Jinx es X".
-
+        int velocidadJinx = 50;
+        int buffVelocidad = 30;
+        System.out.println("La velocidad final de Jinx es " + (velocidadJinx + buffVelocidad));
 
         // ==============================
         // EJERCICIO 5 – Conversor de monedas de juego

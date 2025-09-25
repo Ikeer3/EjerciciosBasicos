@@ -1,9 +1,7 @@
 public class EjerciciosIfVideojuegos {
 
 
-
     public static void main(String[] args) {
-
 
 
         // ==============================
@@ -25,11 +23,10 @@ public class EjerciciosIfVideojuegos {
         int vidaJugador = 50;
         if (vidaJugador > 70) {
             System.out.println("Tu personaje está fuerte \uD83D\uDCAA");
-        } else if  (vidaJugador >= 30 &&  vidaJugador <= 70) {
+        } else if (vidaJugador >= 30 && vidaJugador <= 70) {
             System.out.println("Tu personaje está herido \uD83D\uDE22");
         } else
             System.out.println("Tu personaje está en peligro ⚠\uFE0F");
-
 
 
         // ==============================
@@ -61,7 +58,6 @@ public class EjerciciosIfVideojuegos {
             System.out.println("Tipo de ataque no reconocido");
 
 
-
         // ==============================
 
         // EJERCICIO 3 – Tienda de objetos (Fortnite)
@@ -83,13 +79,12 @@ public class EjerciciosIfVideojuegos {
         int numeroBucks = 5000;
         if (numeroBucks >= 2000) {
             System.out.println("Puedes comprar una skin legendaria");
-        } else if  (numeroBucks >= 1200) {
+        } else if (numeroBucks >= 1200) {
             System.out.println("Puedes comprar una skin épica");
         } else if (numeroBucks >= 800) {
             System.out.println("Puedes comprar una skin rara");
         } else
             System.out.println("No tienes suficientes V-Bucks");
-
 
 
         // ==============================
@@ -111,15 +106,14 @@ public class EjerciciosIfVideojuegos {
         //   3000 o más → "Platino"
 
         int puntosRanking = 3000;
-        if (puntosRanking >= 0 &&  puntosRanking < 1000) {
+        if (puntosRanking >= 0 && puntosRanking < 1000) {
             System.out.println("Tu rango es Bronce");
-        }  else if (puntosRanking >= 1000 &&  puntosRanking < 2000) {
+        } else if (puntosRanking >= 1000 && puntosRanking < 2000) {
             System.out.println("Tu rango es Plata");
-        } else if (puntosRanking >= 2000 &&  puntosRanking < 3000) {
+        } else if (puntosRanking >= 2000 && puntosRanking < 3000) {
             System.out.println("Tu rango es Oro");
         } else
             System.out.println("Tu rango es Platino");
-
 
 
         // ==============================
@@ -143,15 +137,13 @@ public class EjerciciosIfVideojuegos {
         short hora = 15;
         if (hora >= 0 && hora <= 5) {
             System.out.println("Madrugada, mejor dormir \uD83D\uDE34");
-        } else if  (hora >= 6 && hora <= 11) {
+        } else if (hora >= 6 && hora <= 11) {
             System.out.println("Es de mañana, los aldeanos están activos ☀\uFE0F");
-        } else  if  (hora >= 12 && hora <= 18) {
+        } else if (hora >= 12 && hora <= 18) {
             System.out.println("Es de tarde, hora de explorar \uD83D\uDD0D");
-        } else  if  (hora >= 19 && hora <= 23) {
+        } else if (hora >= 19 && hora <= 23) {
             System.out.println("Es de noche, cuidado con los mobs 🌙");
         }
-
-
 
 
         // ==============================
@@ -187,7 +179,6 @@ public class EjerciciosIfVideojuegos {
         //   - Combina condiciones con && y || para logros más complejos.
 
         //   - Ejemplo: (kills > 20 && muertes < 5) → "Logro: PRO absoluto 🔥"
-
 
 
     }

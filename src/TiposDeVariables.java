@@ -69,6 +69,7 @@ public class TiposDeVariables {
         int buffVelocidad = 30;
         System.out.println("La velocidad final de Jinx es " + (velocidadJinx + buffVelocidad));
 
+
         // ==============================
         // EJERCICIO 5 – Conversor de monedas de juego
         // ==============================
@@ -76,6 +77,12 @@ public class TiposDeVariables {
         // Convierte a su equivalente en V-Bucks y en RP de LoL
         // usando tasas de cambio inventadas (ej: 1 moneda MC = 5 V-Bucks = 2 RP).
         // Imprime el resultado en formato claro.
+        int monedaMinecraft = 1;
+        int bucks = monedaMinecraft * 5;
+        int rp = monedaMinecraft * 2;
+        System.out.println(monedaMinecraft + " moneda MC = " +
+                bucks + " V-Bucks = " +
+                rp + " RP");
 
 
         // ==============================

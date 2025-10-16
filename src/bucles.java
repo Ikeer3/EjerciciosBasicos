@@ -28,13 +28,14 @@ public class bucles {
         System.out.println("Cuánto te valió el refresco?: ");
         int refresco = scanner.nextInt();
 
-        int cambio = saldo - refresco;
 
-        while (saldo > refresco) {
-            System.out.println("Aquí tienes tu refresco y tu cambio: "  + cambio + "€");
-            saldo -= refresco;
-            cambio++;
+        while (saldo >= refresco) {
+            saldo = saldo - refresco;
+            System.out.println("Te queda este saldo: " + saldo + "€");
+            System.out.println("Cuánto te cuesta otro refresco?: ");
+            refresco = scanner.nextInt();
         }
+        System.out.println("\nSaldo insuficiente \uD83D\uDE1E");
 
         // EJERCICIO 3 "Batalla Pokémon Simplificada"
         // Pide al usuario los puntos de vida (HP) de su Pokémon y los del rival.
@@ -72,5 +73,17 @@ public class bucles {
         } else if (vidaRival <= 0) {
             System.out.println("\nTu pokémon Charizard ha ganado!!");
         }
+
+        // EJERCICIO 4 "Simulador de lanzamiento de moneda"
+        // Pide al usuario cuántas veces quiere lanzar una moneda.
+        // Usa un bucle for para generar resultados aleatorios (“cara” o “cruz”);
+        // Cuenta cuántas veces salió cada uno y muestra el total al final.
+        // (Sugerencia: usa Math.random() y condicionales.)
+
+        System.out.println("Cuántas veces quieres lanzar la moneda?: ");
+        int moneda = scanner.nextInt();
+
+
+
     }
 }

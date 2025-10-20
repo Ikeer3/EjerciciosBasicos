@@ -10,7 +10,7 @@ public class bucles {
         // Al final, imprime "Has terminado de picar X bloques!".
 
         Scanner scanner = new Scanner(System.in);
-        /* System.out.println("Cuántos bloques quieres picar?: ");
+        System.out.println("Cuántos bloques quieres picar?: ");
         int bloques = scanner.nextInt();
 
         for (int i = 1; i <= bloques; i++) {
@@ -80,7 +80,7 @@ public class bucles {
         // Usa un bucle for para generar resultados aleatorios (“cara” o “cruz”);
         // Cuenta cuántas veces salió cada uno y muestra el total al final.
         // (Sugerencia: usa Math.random() y condicionales.)
-*/
+
         System.out.println("Cuántas veces quieres lanzar la moneda?: ");
         int lanzamiento = scanner.nextInt();
         int contadorCara = 0;
@@ -106,5 +106,26 @@ public class bucles {
         // Pide al usuario que lo adivine usando un bucle while.
         // Si el número es mayor o menor, muestra una pista con un if.
         // Cuando acierte, imprime "¡Correcto! Has adivinado el número en X intentos!".
+
+        Random Generadornumero = new Random();
+        int numeroEntrada = Generadornumero.nextInt(1, 11);
+
+        boolean acierto = false;
+        int contador = 0;
+
+        while (!acierto) {
+            System.out.println("\nIntroduce el siguiente numero a probar: ");
+            int numeroUsuario = scanner.nextInt();
+            contador ++;
+            if (numeroUsuario > numeroEntrada) {
+                System.out.println("Te has pasado");
+            } else if (numeroUsuario < numeroEntrada) {
+                System.out.println("Te has quedado corto");
+            } else {
+                System.out.println("Has acertado!!");
+                acierto = true;
+            }
+        }
+        System.out.println("Has hecho " + contador + " intentos");
     }
 }

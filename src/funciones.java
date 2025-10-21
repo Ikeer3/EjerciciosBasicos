@@ -1,8 +1,9 @@
 import java.util.Scanner;
 public class funciones {
 
-    public static String saludar(String nombre) {
-        return "¡Hola, " + nombre + "! Bienvenido al servidor de programación";
+    public static void saludar(String nombre) {
+        String paraImprimir =  "¡Hola, " + nombre + "! Bienvenido al servidor de programación";
+        System.out.println(paraImprimir);
     }
 
     public static void main(String[] args) {
@@ -12,8 +13,9 @@ public class funciones {
         // "¡Hola, [nombre]! Bienvenido al servidor de programación."
         // Desde main, pide el nombre por teclado y llama a la función.
 
+        System.out.println("Cuál es tu nombre?: ");
         Scanner scanner = new Scanner(System.in);
-        String nombre = scanner.next();
-        saludar(nombre);
+        String nombrePorTeclado = scanner.next();
+        saludar(nombrePorTeclado);
     }
 }

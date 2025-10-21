@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class funciones {
 
-    public static String saludar() {
-        return "¡Hola, " + saludar() + "! Bienvenido al servidor de programación";
+    public static String saludar(String nombre) {
+        return "¡Hola, " + nombre + "! Bienvenido al servidor de programación";
     }
 
     public static void main(String[] args) {
@@ -14,5 +14,6 @@ public class funciones {
 
         Scanner scanner = new Scanner(System.in);
         String nombre = scanner.next();
+        saludar(nombre);
     }
 }

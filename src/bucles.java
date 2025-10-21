@@ -59,12 +59,18 @@ public class bucles {
             System.out.println("Venusaur" + "\nVida: " + vidaRival);
             if (turnoPokemon) {
                 System.out.println("\nCharizard pierde " + danho + " puntos de vida");
-                vida -= danho;
+                vida = vida - danho;
+                if (vida < 0) {
+                    vida = 0;
+                }
                 System.out.println("Vida restante de Charizard: " + vida);
 
             } else {
                 System.out.println("\nVenusaur pierde " + danho + " puntos de vida");
-                vidaRival -= danho;
+                vidaRival = vidaRival -danho;
+                if (vidaRival < 0) {
+                    vidaRival = 0;
+                }
                 System.out.println("Vida restante de Venusaur: " + vidaRival);
             }
             turnoPokemon = !turnoPokemon;

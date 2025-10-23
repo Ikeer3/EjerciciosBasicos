@@ -11,6 +11,11 @@ public class funciones {
         return suma;
     }
 
+    public static int celsiusAFahrenheit(int C) {
+        int celsius = (C * 9/5) + 32;
+        return celsius;
+    }
+
     public static void main(String[] args) {
         // EJERCICIO 1 "Saludo personalizado"
         // Crea una función estática llamada saludar() que reciba un nombre como parámetro (String)
@@ -33,9 +38,22 @@ public class funciones {
         System.out.println("Dame otro número entero: ");
         Scanner escanerOtroNumeroEntero = new Scanner(System.in);
 
-        int suma = (escanerNumeroEntero.nextInt() +  escanerOtroNumeroEntero.nextInt());
-        sumar(suma, suma);
+        int sumaPorTeclado = (escanerNumeroEntero.nextInt() + escanerOtroNumeroEntero.nextInt());
+        sumar(sumaPorTeclado, sumaPorTeclado);
 
-        System.out.println("La suma de A + B es: " + suma);
+        System.out.println("La suma de A + B es: " + sumaPorTeclado);
+
+        // EJERCICIO 3 "Conversión de temperatura"
+        // Crea una función estática llamada celsiusAFahrenheit() que reciba una temperatura
+        // en Celsius y devuelva su conversión a Fahrenheit usando la fórmula F = (C * 9/5) + 32.
+        // Desde el main, pide una temperatura al usuario y muestra el resultado.
+
+        System.out.println("\nDame una temperatura Celsius: ");
+        Scanner escanerTemperatura = new Scanner(System.in);
+
+        int temperaturaPorTeclado = escanerTemperatura.nextInt();
+        celsiusAFahrenheit(temperaturaPorTeclado);
+
+        System.out.println("La temperatura en Farenheit es: " +  celsiusAFahrenheit(temperaturaPorTeclado));
     }
 }

@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 public class funciones {
 
@@ -14,6 +15,12 @@ public class funciones {
     public static int celsiusAFahrenheit(int C) {
         int celsius = (C * 9/5) + 32;
         return celsius;
+    }
+
+    public static int lanzarDado() {
+        Random numeroRandom = new Random();
+        int dado = numeroRandom.nextInt(1, 7);
+        return dado;
     }
 
     public static void main(String[] args) {
@@ -55,5 +62,14 @@ public class funciones {
         celsiusAFahrenheit(temperaturaPorTeclado);
 
         System.out.println("La temperatura en Farenheit es: " +  celsiusAFahrenheit(temperaturaPorTeclado));
+
+        // EJERCICIO 4 "Crea un dado"
+        // Crea una función estática llamada lanzarDado() que no reciba parámetros y
+        // devuelva un número aleatorio entre 1 y 6. Desde main, llama a la función
+        // varias veces (por ejemplo, dentro de un for) y muestra cada lanzamiento.
+
+        for (int i = 1; i <= 6; i++) {
+            System.out.println("\nEl lanzamiento fue: " + lanzarDado());
+        }
     }
 }

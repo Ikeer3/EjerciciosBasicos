@@ -1,9 +1,10 @@
 import java.util.Random;
 import java.util.Scanner;
+
 public class funciones {
 
     public static void saludar(String nombre) {
-        String paraImprimir =  "¡Hola, " + nombre + "! Bienvenido al servidor de programación";
+        String paraImprimir = "¡Hola, " + nombre + "! Bienvenido al servidor de programación";
         System.out.println(paraImprimir);
     }
 
@@ -13,7 +14,7 @@ public class funciones {
     }
 
     public static int celsiusAFahrenheit(int C) {
-        int celsius = (C * 9/5) + 32;
+        int celsius = (C * 9 / 5) + 32;
         return celsius;
     }
 
@@ -21,6 +22,26 @@ public class funciones {
         Random numeroRandom = new Random();
         int dado = numeroRandom.nextInt(1, 7);
         return dado;
+    }
+
+    public static int sumaCalculadora(int a, int b) {
+        int sumaCalculadora = a + b;
+        return sumaCalculadora;
+    }
+
+    public static int restaCalculadora(int a, int b) {
+        int resta = a - b;
+        return resta;
+    }
+
+    public static int multiplicacionCalculadora(int a, int b) {
+        int multiplicacion = a * b;
+        return multiplicacion;
+    }
+
+    public static double divisionCalculadora(double a, double b) {
+        double division = a / b;
+        return division;
     }
 
     public static void main(String[] args) {
@@ -40,12 +61,14 @@ public class funciones {
         // y devuelva su suma. En el main, pide los dos números, llama a la función
         // y muestra el resultado con un mensaje como: "La suma de A + B es = X".
 
-        System.out.println("\nDame un número entero: ");
-        Scanner escanerNumeroEntero = new Scanner(System.in);
-        System.out.println("Dame otro número entero: ");
-        Scanner escanerOtroNumeroEntero = new Scanner(System.in);
+        Scanner sumaSimple = new Scanner(System.in);
 
-        int sumaPorTeclado = (escanerNumeroEntero.nextInt() + escanerOtroNumeroEntero.nextInt());
+        System.out.println("\nDame un número entero: ");
+        int sumaCalculadora = sumaSimple.nextInt();
+        System.out.println("Dame otro número entero: ");
+        int otraSumaCalculadora = sumaSimple.nextInt();
+
+        int sumaPorTeclado = sumaCalculadora + otraSumaCalculadora;
         sumar(sumaPorTeclado, sumaPorTeclado);
 
         System.out.println("La suma de A + B es: " + sumaPorTeclado);
@@ -61,7 +84,7 @@ public class funciones {
         int temperaturaPorTeclado = escanerTemperatura.nextInt();
         celsiusAFahrenheit(temperaturaPorTeclado);
 
-        System.out.println("La temperatura en Farenheit es: " +  celsiusAFahrenheit(temperaturaPorTeclado));
+        System.out.println("La temperatura en Farenheit es: " + celsiusAFahrenheit(temperaturaPorTeclado));
 
         // EJERCICIO 4 "Crea un dado"
         // Crea una función estática llamada lanzarDado() que no reciba parámetros y
@@ -70,6 +93,38 @@ public class funciones {
 
         for (int i = 1; i <= 6; i++) {
             System.out.println("\nEl lanzamiento fue: " + lanzarDado());
+        }
+
+        // EJERCICIO 5 "Calculadora simple"
+        // Crea 4 funciones estáticas:
+        //
+        // sumar(int a, int b)
+        // restar(int a, int b)
+        // multiplicar(int a, int b)
+        // dividir(double a, double b)
+        // Desde main, pide dos números al usuario y una operación (por ejemplo: “+”, “-”, “*”, “/”),
+        // usa un if o switch para decidir qué función llamar y muestra el resultado.
+
+        Scanner calculadora = new Scanner(System.in);
+
+        System.out.println("\nIngresa un número: ");
+        int numeroCalculadora = calculadora.nextInt();
+        System.out.println("Ingresa otro numero: ");
+        int OtroNumeroCalculadora = calculadora.nextInt();
+        System.out.println("Que operación quieres usar?: ");
+        String operacion = calculadora.next();
+
+        if (operacion.equals("suma")) {
+            System.out.println("\nEl resultado es: " + sumaCalculadora(numeroCalculadora, OtroNumeroCalculadora));
+        }
+        if (operacion.equals("resta")) {
+            System.out.println("\nEl resultado es: " + restaCalculadora(numeroCalculadora, OtroNumeroCalculadora));
+        }
+        if (operacion.equals("multiplicacion")) {
+            System.out.println("\nEl resultado es: " + multiplicacionCalculadora(numeroCalculadora, OtroNumeroCalculadora));
+        }
+        if (operacion.equals("division")) {
+            System.out.println("\nEl resultado es: " + divisionCalculadora(numeroCalculadora, OtroNumeroCalculadora));
         }
     }
 }

@@ -51,8 +51,8 @@ public class funciones {
         // "¡Hola, [nombre]! Bienvenido al servidor de programación."
         // Desde main, pide el nombre por teclado y llama a la función.
 
-        System.out.println("Cuál es tu nombre?: ");
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Cuál es tu nombre?: ");
         String nombrePorTeclado = scanner.next();
         saludar(nombrePorTeclado);
 
@@ -68,10 +68,7 @@ public class funciones {
         System.out.println("Dame otro número entero: ");
         int otraSumaCalculadora = sumaSimple.nextInt();
 
-        int sumaPorTeclado = sumaCalculadora + otraSumaCalculadora;
-        sumar(sumaPorTeclado, sumaPorTeclado);
-
-        System.out.println("La suma de A + B es: " + sumaPorTeclado);
+        System.out.println("La suma de A + B es: " + sumar(sumaCalculadora, otraSumaCalculadora));
 
         // EJERCICIO 3 "Conversión de temperatura"
         // Crea una función estática llamada celsiusAFahrenheit() que reciba una temperatura

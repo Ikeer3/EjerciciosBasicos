@@ -3,11 +3,21 @@ import java.util.Scanner;
 
 public class funciones {
 
+    /**
+     * Esta función se utiliza para imprimir el nombre que recibe por consola
+     * @param nombre el que el usuario elige por consola
+     */
     public static void saludar(String nombre) {
         String paraImprimir = "¡Hola, " + nombre + "! Bienvenido al servidor de programación";
         System.out.println(paraImprimir);
     }
 
+    /**
+     * Esta función se utiliza para sumar dos números enteros
+     * @param a número entero mayor o igual que cero
+     * @param b número entero mayor o igual que cero
+     * @return el resultado de la suma
+     */
     public static int sumar(int a, int b) {
         int suma = a + b;
         return suma;

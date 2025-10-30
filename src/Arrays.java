@@ -17,7 +17,14 @@ public class Arrays {
         objetosMinecraft[3] = "bloques de piedra";
         objetosMinecraft[4] = "antorchas";
 
-        }
+        for (int posicionActual = 0;
+             posicionActual<objetosMinecraft.length;
+             posicionActual++) {
+            String paraImprimir = "Tienes en tu inventario: " + objetosMinecraft[posicionActual];
 
+            System.out.println(paraImprimir);
+        }
+        int cantidadObjetos = objetosMinecraft.length;
+        System.out.println("\nEl jugador tiene " + cantidadObjetos + " objetos");
     }
 }

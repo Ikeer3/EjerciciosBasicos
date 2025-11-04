@@ -1,3 +1,6 @@
+import java.util.Random;
+import java.util.Scanner;
+
 public class Arrays {
     public static void main(String[] args) {
 
@@ -49,9 +52,9 @@ public class Arrays {
         int puntuacionTotal = 0;
         int mayorPuntuacion = puntuaciones[0];
 
-        for ( int posicionActualJuego = 0;
-              posicionActualJuego<puntuaciones.length;
-              posicionActualJuego++) {
+        for (int posicionActualJuego = 0;
+             posicionActualJuego < puntuaciones.length;
+             posicionActualJuego++) {
             if (puntuaciones[posicionActualJuego] > mayorPuntuacion) {
                 mayorPuntuacion = puntuaciones[posicionActualJuego];
             }
@@ -61,8 +64,46 @@ public class Arrays {
         String paraImprimirPuntuaciones = "\nTu récord fue de " + puntuacionTotal +
                 " puntos en una partida" + "\nTu puntuación media fue de " + media +
                 " puntos en una partida" + "\nTu mayor puntuación conseguida en una partida fue de " +
-                mayorPuntuacion + " puntos";
+                mayorPuntuacion + " puntos\n";
 
         System.out.println(paraImprimirPuntuaciones);
+
+
+        // EJERCICIO 3 - Impostor Among us
+        // Crea un array con 6 jugadores de Among Us - los nombres.
+        // Utiliza la librería Random para decir cual de ellos es el impostor;
+        // será el 0, 1, 2, 3, 4 o 5 en el array.
+        // Imprime los nombres de los jugadores.
+        // Pregunta al jugador cual cree que es el impostor - tiene que escribir el nombre.
+        // Utilizando un bucle for, recupera cual es el nombre del impostor que se calculó al principio.
+        // Imprime el resultado de la partida.
+
+        String[] nombresAmong = new String[6];
+
+        nombresAmong[0] = "Carlos";
+        nombresAmong[1] = "Iván";
+        nombresAmong[2] = "Iker";
+        nombresAmong[3] = "Daniel";
+        nombresAmong[4] = "Isabella";
+        nombresAmong[5] = "Marcos";
+
+        Random impostor = new Random();
+        int personaImpostor = impostor.nextInt(0, 6);
+
+        for (int posicionActualNombres = 0;
+             posicionActualNombres < nombresAmong.length;
+             posicionActualNombres++) {
+            String paraImprimirNombres = "Los participantes son: " + nombresAmong[posicionActualNombres];
+
+            System.out.println(paraImprimirNombres);
+        }
+        Scanner escaner = new Scanner(System.in);
+
+        System.out.println("\nQuién cres que es el impostor?: ");
+        String elegirImpostor = escaner.next();
+
+        for (int i = 0; i == personaImpostor; i++) {
+            System.out.println(personaImpostor);
+        }
     }
 }

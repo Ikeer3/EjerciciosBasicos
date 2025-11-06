@@ -177,9 +177,28 @@ public class Arrays {
             }
         }
         if (indiceEncontrado != -1) {
-            System.out.println("El nivel de poder de: " + saiyanBuscado + " es: " + poderesSaiyans[indiceEncontrado]);
+            System.out.println("\nEl nivel de poder de " + saiyanBuscado + " es: " + poderesSaiyans[indiceEncontrado]);
         } else {
             System.out.println("El nivel de poder de " + saiyanBuscado + " no fue encontrado");
         }
+        // Calcular Saiyan más poderoso y el más débil
+        int mayorPoder = poderesSaiyans[0];
+        int menorPoder = poderesSaiyans[0];
+        int nombreMax = 0;
+        int nombreMin = 0;
+
+        for (int posicionActualPoderes = 0;
+             posicionActualPoderes < poderesSaiyans.length;
+             posicionActualPoderes++) {
+            if (poderesSaiyans[posicionActualPoderes] > mayorPoder) {
+                mayorPoder = poderesSaiyans[posicionActualPoderes];
+                nombreMax = posicionActualPoderes;
+            } else if (poderesSaiyans[posicionActualPoderes] < menorPoder) {
+                menorPoder = poderesSaiyans[posicionActualPoderes];
+                nombreMin = posicionActualPoderes;
+            }
+        }
+        System.out.println("El Saiyan más fuerte es " + nombreSaiyans[nombreMax] + " con un poder de " + mayorPoder);
+        System.out.println("El Saiyan más débil es " + nombreSaiyans[nombreMin] + " con un poder de " + menorPoder);
     }
 }

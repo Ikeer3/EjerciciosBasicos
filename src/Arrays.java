@@ -87,9 +87,6 @@ public class Arrays {
         nombresAmong[4] = "Isabella";
         nombresAmong[5] = "Marcos";
 
-        Random impostor = new Random();
-        int personaImpostor = impostor.nextInt(0, 6);
-
         for (int posicionActualNombres = 0;
              posicionActualNombres < nombresAmong.length;
              posicionActualNombres++) {
@@ -98,14 +95,20 @@ public class Arrays {
             System.out.println(paraImprimirNombres);
         }
 
+        Random impostor = new Random();
+        int personaImpostor = impostor.nextInt(0, 6);
+
         Scanner escaner = new Scanner(System.in);
         System.out.println("\nQuién cres que es el impostor?: ");
         String elegirImpostor = escaner.next();
 
-        if (elegirImpostor.equals(personaImpostor)) {
-            System.out.println("Has acertado");
+        String impostorString;
+        impostorString=nombresAmong[personaImpostor];
+
+        if (elegirImpostor.equals(impostorString)) {
+            System.out.println("Has acertado " + impostorString + " era el impostor");
         } else {
-            System.out.println("Has fallado");
+            System.out.println("Has fallado, el impostor era " + impostorString);
         }
 
 
@@ -124,7 +127,7 @@ public class Arrays {
         nombresPokemon [3] = "";
         nombresPokemon [4] = "";
 
-        
+
 
     }
 }

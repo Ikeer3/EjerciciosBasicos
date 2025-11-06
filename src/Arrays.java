@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Arrays {
     public static void main(String[] args) {
-
+/*
         // EJERCICIO 1 - Objetos de Minecraft
         // Crea un array de Strings con los objetos del inventario de un jugador - tiene
         // que tener 5 objetos - (por ejemplo: "espada", "pico", "manzana dorada", "bloques
@@ -121,13 +121,65 @@ public class Arrays {
 
         String[] nombresPokemon = new String[5];
 
-        nombresPokemon [0] = "";
-        nombresPokemon [1] = "";
-        nombresPokemon [2] = "";
-        nombresPokemon [3] = "";
-        nombresPokemon [4] = "";
+        Scanner pokemon = new Scanner(System.in);
+        for (int i=0; i < nombresPokemon.length; i++) {
+            System.out.println("\nIntroduce el nombre del Pokemon capturado número " + (i+1) + ":");
+            String nombrePorEscaner = pokemon.next();
+            nombresPokemon[i] = nombrePorEscaner;
+        }
+        for (int i = nombresPokemon.length-1; i>=0; i--) {
+            int numeroCaptura = i;
+            System.out.println("Posición " + numeroCaptura + ": " + nombresPokemon[i]);
+        }
 
+*/
+        // EJERCICIO 5 - Chequeo de niveles de poder
+        // Crea un array con 5 nombres de Saiyans, y otro array con sus poderes. Por ejemplo, en la posición 0 del de nombres
+        // puede aparecer Vegeta, en la posición 0 del de poderes, puede aparecer 9000.
+        //
+        // A continuación, en un bucle:
+        // Pregunta al usuario de quién quiere conocer el poder.
+        // Imprime el poder de ese guerrero si existe; si no existe, imprime "No tengo datos".
+        // Pregunta al usuario si quiere preguntar por otro guerrero, o si quiere acabar
+        // Tras salir del bucle:
+        // Calcula el saiyan más fuerte y el más débil.
+        // Imprime "El saiyan más fuerte es [nombre] con un poder de [poder]"
+        // Imprime "El saiyan más débil es [nombre] con un poder de [poder]"
 
+        String[] nombreSaiyans = new String[5];
 
+        nombreSaiyans[0] = "Vegeta";
+        nombreSaiyans[1] = "Freezer";
+        nombreSaiyans[2] = "Goku";
+        nombreSaiyans[3] = "Krilin";
+        nombreSaiyans[4] = "Cell";
+
+        int[] poderesSaiyans = new int [5];
+
+        poderesSaiyans [0] = 8000;
+        poderesSaiyans [1] = 9000;
+        poderesSaiyans [2] = 10000;
+        poderesSaiyans [3] = 6000;
+        poderesSaiyans [4] = 7000;
+
+        Scanner escanerSaiyan = new Scanner(System.in);
+
+        System.out.println("\nDe qué Saiyan quieres conocer su poder?: ");
+        String saiyanBuscado = escanerSaiyan.next();
+
+        int indiceEncontrado = -1;
+        for (int posicionActualSaiyans = 0;
+             posicionActualSaiyans < nombreSaiyans.length;
+             posicionActualSaiyans++) {
+
+            if (nombreSaiyans[posicionActualSaiyans].equals(saiyanBuscado)) {
+                indiceEncontrado = posicionActualSaiyans;
+            }
+        }
+        if (indiceEncontrado != -1) {
+            System.out.println("El nivel de poder de: " + saiyanBuscado + " es: " + poderesSaiyans[indiceEncontrado]);
+        } else {
+            System.out.println("El nivel de poder de " + saiyanBuscado + " no fue encontrado");
+        }
     }
 }

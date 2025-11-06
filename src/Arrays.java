@@ -97,13 +97,34 @@ public class Arrays {
 
             System.out.println(paraImprimirNombres);
         }
-        Scanner escaner = new Scanner(System.in);
 
+        Scanner escaner = new Scanner(System.in);
         System.out.println("\nQuién cres que es el impostor?: ");
         String elegirImpostor = escaner.next();
 
-        for (int i = 0; i == personaImpostor; i++) {
-            System.out.println(personaImpostor);
+        if (elegirImpostor.equals(personaImpostor)) {
+            System.out.println("Has acertado");
+        } else {
+            System.out.println("Has fallado");
         }
+
+
+        // EJERCICIO 4 - Captura de Pokemon
+        // Crea un array de tamaño 5, de String, pero no le des ningún valor.
+        // En un bucle:
+        // Pregunta al usuario el nombre del Pokemon que acaba de capturar.
+        // Guárdalo en la posición correcta del array.
+        // Después, imprime el nombre de todos los Pokemon, pero en orden inverso.
+
+        String[] nombresPokemon = new String[5];
+
+        nombresPokemon [0] = "";
+        nombresPokemon [1] = "";
+        nombresPokemon [2] = "";
+        nombresPokemon [3] = "";
+        nombresPokemon [4] = "";
+
+        
+
     }
 }

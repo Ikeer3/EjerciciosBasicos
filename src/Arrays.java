@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Arrays {
     public static void main(String[] args) {
-/*
+
         // EJERCICIO 1 - Objetos de Minecraft
         // Crea un array de Strings con los objetos del inventario de un jugador - tiene
         // que tener 5 objetos - (por ejemplo: "espada", "pico", "manzana dorada", "bloques
@@ -132,7 +132,7 @@ public class Arrays {
             System.out.println("Posición " + numeroCaptura + ": " + nombresPokemon[i]);
         }
 
-*/
+
         // EJERCICIO 5 - Chequeo de niveles de poder
         // Crea un array con 5 nombres de Saiyans, y otro array con sus poderes. Por ejemplo, en la posición 0 del de nombres
         // puede aparecer Vegeta, en la posición 0 del de poderes, puede aparecer 9000.
@@ -200,5 +200,44 @@ public class Arrays {
         }
         System.out.println("El Saiyan más fuerte es " + nombreSaiyans[nombreMax] + " con un poder de " + mayorPoder);
         System.out.println("El Saiyan más débil es " + nombreSaiyans[nombreMin] + " con un poder de " + menorPoder);
+
+
+        // EJERCICIO 6 - Creación de un array aleatorio
+        // Realiza un programa que genere un array de números aleatorios DECIMALES. Para ello:
+        //
+        // 1.- Pide por teclado el número de elementos que tendrá el array. Tienes que pedirlo ANTES de
+        // crear el array - recuerda, cuando inicializamos un array, tenemos que decir cuantos elementos
+        // va a tener.
+        // 2.- Pide por teclado el número mínimo para los valores aleatorios.
+        // 3.- Pide por teclado el número máximo para los valores aleatorios.
+        //
+        // Una vez que tengas todos estos datos, crea el array en un bucle. A continuación, en otro bucle,
+        // imprime el array como:
+        // posición 0: 0,32
+        // posición 1: 5,27
+        // posición 2: 4,31
+        // posición 3: 2,27
+
+        Scanner escanerArrayTeclado = new Scanner(System.in);
+        Random aleatorio = new Random();
+        System.out.println("\nQué tamaño tendrá el Array?: ");
+        int tamanhoArray =  escanerArrayTeclado.nextInt();
+
+        System.out.println("Introduce el valor mínimo del Array: ");
+        double valorMinArray = escanerArrayTeclado.nextDouble();
+
+        System.out.println("Introduce el valor máximo del Array: ");
+        double valorMaxArray = escanerArrayTeclado.nextDouble();
+
+        double[] arrayTeclado = new double[tamanhoArray];
+
+        for (int datoArray = 0; datoArray < tamanhoArray; datoArray++) {
+            arrayTeclado[datoArray] = aleatorio.nextDouble(valorMinArray, valorMaxArray);
+        }
+
+        System.out.println("El Array ingresado es: ");
+        for (int i = 0; i < tamanhoArray; i++) {
+            System.out.println("Posición " + (i+1) + (": ") + arrayTeclado[i]);
+        }
     }
 }

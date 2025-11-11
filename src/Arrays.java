@@ -187,7 +187,7 @@ public class Arrays {
         int nombreMax = 0;
         int nombreMin = 0;
 
-        for (int posicionActualPoderes = 0;
+        for (int posicionActualPoderes = 1;
              posicionActualPoderes < poderesSaiyans.length;
              posicionActualPoderes++) {
             if (poderesSaiyans[posicionActualPoderes] > mayorPoder) {

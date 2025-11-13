@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class basicosRico {
     public static void main(String[] args) {
 
@@ -76,5 +78,25 @@ public class basicosRico {
         // Ejercicio 4: Rellenar un Array con Scanner (Alineación de Fútbol)
         //
         // Objetivo: Crear un array vacío y rellenarlo con datos introducidos por el usuario.
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("\nCuántos jugadores quieres convocar?: ");
+        // Preguntamos el tamaño del array
+        int numeroJugadores = teclado.nextInt();
+
+        // Creamos un Array con el número de jugadores que nos ha dicho el usuario
+        String[] convocatoria = new String[numeroJugadores];
+
+        // Bucle 1: para rellenar el array
+        for (int i = 0; i < convocatoria.length; i++) {
+            System.out.println("Nombre del jugador " + (i+1 + ":"));
+            convocatoria[i] = teclado.next();
+        }
+        // Bucle 2: mostrar el array lleno
+        System.out.println("\n--Convocatoria oficial--");
+        for (int i = 0; i < convocatoria.length; i++) {
+            System.out.println("Dorsal " + (i+1) + ": " + convocatoria[i]);
+        }
     }
 }

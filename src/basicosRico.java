@@ -43,5 +43,38 @@ public class basicosRico {
             System.out.println("Coche en la plaza " + i + ": " + marcasCoche[i]);
         }
 
+
+        // Ejercicio 3: Procesar datos (Media de notas)
+        //
+        // Objetivo: Usar un array de números (int) para realizar cálculos, como una suma y una media.
+
+        int[] notasClase = new int[7];
+
+        notasClase[0] = 8;
+        notasClase[1] = 9;
+        notasClase[2] = 7;
+        notasClase[3] = 10;
+        notasClase[4] = 1;
+        notasClase[5] = 6;
+        notasClase[6] = 3;
+
+        int sumaNotas = 0;
+
+        for (int i = 0; i < notasClase.length; i++) {
+            sumaNotas = sumaNotas + notasClase[i];
+            System.out.print("\nSumando " + notasClase[i] + " | Suma parcial: " + sumaNotas);
+        }
+        double mediaNotas = (double) sumaNotas/notasClase.length;
+
+        System.out.println("\n-- Resultados --");
+        System.out.println("Número total de notas: " + notasClase.length);
+        System.out.println("Suma total de notas: " + sumaNotas);
+        // Printf + %.2f para reducir número de decimales double
+        System.out.printf("Media de notas: %.2f\n", mediaNotas);
+
+
+        // Ejercicio 4: Rellenar un Array con Scanner (Alineación de Fútbol)
+        //
+        // Objetivo: Crear un array vacío y rellenarlo con datos introducidos por el usuario.
     }
 }

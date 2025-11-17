@@ -1,6 +1,16 @@
 import java.util.Scanner;
 
 public class basicosRico {
+
+    public static void imprimirSala (char[][] butacasCine) {
+        for (int i = 0; i < butacasCine.length; i++) {
+            for (int j = 0; j < butacasCine[i].length; j++) {
+                System.out.print(butacasCine[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 
         // ARRAYS
@@ -90,7 +100,7 @@ public class basicosRico {
 
         // Bucle 1: para rellenar el array
         for (int i = 0; i < convocatoria.length; i++) {
-            System.out.println("Nombre del jugador " + (i+1 + ":"));
+            System.out.println("Nombre del jugador " + (i+1) + ":");
             convocatoria[i] = teclado.next();
         }
         // Bucle 2: mostrar el array lleno
@@ -98,5 +108,33 @@ public class basicosRico {
         for (int i = 0; i < convocatoria.length; i++) {
             System.out.println("Dorsal " + (i+1) + ": " + convocatoria[i]);
         }
+
+
+        // Ejercicio 5: Array Bidimensional (Butacas del Cine)
+        //
+        // Objetivo: Entender cómo funciona un array de dos dimensiones (matriz)
+        // para representar las butacas de un cine.
+
+        //'L' = Libre , 'O' = Ocupada
+        char[][] butacasCine = new char[4][5];
+
+        // Bucle que recorre las filas
+        for (int i = 0; i < 4; i++) {
+            // Bucle que recorre las columnas
+            for (int j = 0; j < 5; j++) {
+                butacasCine[i][j] = 'L';
+            }
+        }
+        System.out.println("\n--Sala de Cine (todas libres)--");
+        imprimirSala(butacasCine);
+
+        System.out.println("\nLlegan espectadores...");
+        butacasCine[0][2] = 'O';
+        butacasCine[1][3] = 'O';
+        butacasCine[2][1] = 'O';
+        butacasCine[3][2] = 'O';
+
+        System.out.println("--Sala de Cine (actualizada)--");
+        imprimirSala(butacasCine);
     }
 }

@@ -1,8 +1,9 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class basicosRicoArraysVectoriales {
     public static void main(String[] args) {
-
+/*
         // Ejercicio 1: La Lista Inversa
         // Objetivo: Rellenar un array con Scanner y luego mostrarlo en orden inverso.
         //
@@ -16,12 +17,12 @@ public class basicosRicoArraysVectoriales {
         String[] nombres = new String[cantidadNombres];
 
         for (int i = 0; i < nombres.length; i++) {
-            System.out.print("Introduce el nombre " + (i+1) + ": ");
+            System.out.print("Introduce el nombre " + (i + 1) + ": ");
             nombres[i] = teclado.next();
         }
 
         for (int i = 0; i < nombres.length; i++) {
-            System.out.print("\nNombre " + (i+1) + ": " + nombres[i]);
+            System.out.print("\nNombre " + (i + 1) + ": " + nombres[i]);
         }
 
         System.out.println();
@@ -53,13 +54,45 @@ public class basicosRicoArraysVectoriales {
         for (int i = 0; i < puntuaciones.length; i++) {
             if (puntuaciones[i] > puntuacionMax) {
                 puntuacionMax = puntuaciones[i];
-            }
-            else if (puntuaciones[i] < puntuacionMin) {
+            } else if (puntuaciones[i] < puntuacionMin) {
                 puntuacionMin = puntuaciones[i];
             }
         }
         System.out.println("\n--Puntuaciones de la partida--");
         System.out.println("Puntuación más alta (MVP): " + puntuacionMax);
         System.out.println("Puntuación más baja: " + puntuacionMin);
+*/
+        // Ejercicio 3: Buscador de películas
+        // Objetivo: Pedir al usuario el nombre de una película y buscar si existe en nuestro catálogo (array).
+        //
+        // Conceptos: Recorrer array, comparar String (con .equalsIgnoreCase()), variable boolean (bandera).
+
+        String[] peliculas = new String[6];
+
+        peliculas[0] = "Matrix";
+        peliculas[1] = "Batman";
+        peliculas[2] = "Origen";
+        peliculas[3] = "Seven";
+        peliculas[4] = "Whiplash";
+        peliculas[5] = "Avatar";
+
+        Scanner peliTeclado = new Scanner(System.in);
+
+        System.out.print("\nQué película quieres buscar?: ");
+        String peliElegida = peliTeclado.next();
+
+        boolean peliEncontrada = false;
+
+        for (int i = 0; i < peliculas.length; i++) {
+            if (peliculas[i].equalsIgnoreCase(peliElegida)) {
+                peliEncontrada = true;
+            }
+        }
+
+        if (peliEncontrada) {
+            System.out.println("\nSi! " + peliElegida + " está en nuestro catálogo");
+        } else {
+            System.out.println("\nLo sentimos, " + peliElegida + " no está en nuestro catálogo");
+        }
     }
 }

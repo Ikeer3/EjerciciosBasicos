@@ -16,6 +16,7 @@ public class TiposDeVariables {
         // Crea variables con el nombre del jugador, nivel, vida (double)
         // y si tiene armadura (boolean). Imprímelas como si fuese una ficha del jugador.
 
+        System.out.println("\n---Ejercicio 1---");
         String nombreJugador = "Iker";
         long nivel = 500000;
         double vida = 20.0;
@@ -33,6 +34,7 @@ public class TiposDeVariables {
         // Calcula el daño causado (ataque – defensa).
         // Imprime el resultado: "Pikachu hace X puntos de daño a Charmander" - X es el valor real del daño.
 
+        System.out.println("\n---Ejercicio 2---");
         String ataquePikachu = "rayo";
         String ataqueCharmander = "defensa férrea";
         int dañoPikachu = 50;
@@ -50,6 +52,7 @@ public class TiposDeVariables {
         // Resta el precio de una skin (ej: 1200).
         // Imprime el resultado: "Después de comprar la skin, te quedan X V-Bucks".
 
+        System.out.println("\n---Ejercicio 3---");
         String dineroJugador = "5000";
         int dinero = 5000;
         int skin = 1200;
@@ -66,6 +69,7 @@ public class TiposDeVariables {
         // Calcula la velocidad final sumando ambos valores.
         // Imprime el resultado: "La velocidad final de Jinx es X".
 
+        System.out.println("\n---Ejercicio 4---");
         int velocidadJinx = 50;
         int buffVelocidad = 30;
         System.out.println("La velocidad final de Jinx es " + (velocidadJinx + buffVelocidad));
@@ -79,6 +83,7 @@ public class TiposDeVariables {
         // usando tasas de cambio inventadas (ej: 1 moneda MC = 5 V-Bucks = 2 RP).
         // Imprime el resultado en formato claro.
 
+        System.out.println("\n---Ejercicio 5---");
         int monedaMinecraft = 1;
         int bucks = monedaMinecraft * 5;
         int rp = monedaMinecraft * 2;
@@ -103,6 +108,7 @@ public class TiposDeVariables {
         //
         // OPCIONAL: muestra también el tier en el que quedaría (Bronce, Plata, Oro, Platino…).
 
+        System.out.println("\n---Ejercicio 6---");
         int numeroKills = 10;
         int numeroMuertes = 4;
         int numeroAsistencias = 2;
@@ -118,10 +124,10 @@ public class TiposDeVariables {
         if (KDA >= 5) {
             System.out.println("Tier Platino");
         } else if (KDA >= 3) {
-            System.out.println("Tier Oro");
+            System.out.print("Tier Oro");
         } else if (KDA >= 1) {
-            System.out.println("Tier Plata");
+            System.out.print("Tier Plata");
         } else
-            System.out.println("Tier Bronce");
+            System.out.print("Tier Bronce");
     }
 }

@@ -32,7 +32,7 @@ public class salidaNocheRico {
         // ambulancia por irresponsable.
 
         Scanner lector = new Scanner(System.in);
-        double dineroCliente = 20;
+        double dineroCliente = 100;
 
         System.out.println("\n---VAMOS A TOMAR EL AIRE. BIENVENIDO!!---");
 
@@ -66,6 +66,9 @@ public class salidaNocheRico {
                         if (dineroCliente < precioChupito) {
                             System.out.println("\nNo tienes ni un CHAVO!! Vete al cajero o MÁRCHATE!!");
                             salidaDisco = true;
+                        } else if (nivelAlcohol > 2.0) {
+                            System.out.println("\nNo te mantienes de PIE!! Voy a llamar a una AMBULANCIA!!");
+                            salidaDisco = true;
                         } else {
                             System.out.println("\nAquí tienes tu chupito!! De un trago!!");
                             dineroCliente = dineroCliente - precioChupito;
@@ -76,6 +79,9 @@ public class salidaNocheRico {
                     } else if (bebidaCliente.equalsIgnoreCase("cañas")) {
                         if (dineroCliente < precioCanha) {
                             System.out.println("\nNo tienes ni un CHAVO!! Vete al cajero o MÁRCHATE!!");
+                            salidaDisco = true;
+                        } else if (nivelAlcohol > 2.0) {
+                            System.out.println("\nNo te mantienes de PIE!! Voy a llamar a una AMBULANCIA!!");
                             salidaDisco = true;
                         } else {
                             System.out.println("\nAquí tienes tu caña fresquita!!");
@@ -88,6 +94,9 @@ public class salidaNocheRico {
                         if (dineroCliente < precioCombinado) {
                             System.out.println("\nNo tienes ni un CHAVO!! Vete al cajero o MÁRCHATE!!");
                             salidaDisco = true;
+                        } else if (nivelAlcohol > 2.0) {
+                            System.out.println("\nNo te mantienes de PIE!! Voy a llamar a una AMBULANCIA!!");
+                            salidaDisco = true;
                         } else {
                             System.out.println("\nAquí tienes tu combinado!! Está un poco cargado!!");
                             dineroCliente = dineroCliente - precioCombinado;
@@ -96,9 +105,6 @@ public class salidaNocheRico {
                                     dineroCliente, nivelAlcohol);
                         }
                     }
-                }
-                if (nivelAlcohol > 2) {
-                    System.out.println("\nNo te mantienes de PIE!! Voy a llamar a una AMBULANCIA!!");
                 }
             }
         } else {

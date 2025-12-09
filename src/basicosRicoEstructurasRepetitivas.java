@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class basicosRicoEstructurasRepetitivas {
     public static void main(String[] args) {
-
+/*
         // Ejercicio 1: Analizador de Números
 
         // Objetivo: Crear un programa que pida al usuario 5 números enteros y,
@@ -163,6 +163,23 @@ public class basicosRicoEstructurasRepetitivas {
 
         for (int i = 0; i < 3; i++) {
             System.out.print("\nFELICIDADES!!!");
+        }
+
+*/
+        // Ejercicio 5: Cálculo de Media de Calificaciones
+
+        // Objetivo: Crear un programa que calcule la media de un número indeterminado de calificaciones.
+        // El usuario introducirá notas una por una hasta que introduzca un -1 para indicar que ha terminado.
+        // El programa debe validar que las notas estén entre 0 y 10.
+
+        Scanner lectorNotas = new Scanner(System.in);
+        String notas = "";
+
+        while (true) {
+
+                System.out.print("\nIntroduce las notas de la clase, (cuando quieras parar escribe -1): ");
+                int notasUsuario = lectorNotas.nextInt();
+                notas = notas + notasUsuario;
         }
     }
 }

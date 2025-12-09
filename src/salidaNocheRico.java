@@ -32,7 +32,7 @@ public class salidaNocheRico {
         // ambulancia por irresponsable.
 
         Scanner lector = new Scanner(System.in);
-        double dineroCliente = 20.0;
+        double dineroCliente = 20;
 
         System.out.println("\n---VAMOS A TOMAR EL AIRE. BIENVENIDO!!---");
 
@@ -43,6 +43,7 @@ public class salidaNocheRico {
         double nivelChupito = 0.25;
         double nivelCanha = 0.1;
         double nivelCombinado = 0.4;
+        boolean salidaDisco = false;
 
         System.out.print("\nComo te llamas?: ");
         String nombreCliente = lector.next();
@@ -53,44 +54,54 @@ public class salidaNocheRico {
         System.out.println("\nEl cliente de nombre: " + nombreCliente + ", con edad: " + edadCliente + " años"
                 + ", tiene: " + dineroCliente + "$");
 
-        while (edadCliente >= 18) {
+        if (edadCliente >= 18) {
             if (nivelAlcohol > 1.2) {
                 System.out.println("\nVas etílico perdido, NO puedes entrar!!");
-                break;
             } else {
-                while (dineroCliente > 0 || nivelAlcohol < 2) {
+                while (!salidaDisco) {
                     System.out.print("\nBuenas " + nombreCliente + ", qué quieres beber?");
                     System.out.print("\nTenemos chupitos, cañas o combinados: ");
                     String bebidaCliente = lector.next();
                     if (bebidaCliente.equalsIgnoreCase("chupitos")) {
-                        System.out.println("\nAquí tienes tu chupito!! De un trago!!");
-                        dineroCliente = dineroCliente - precioChupito;
-                        nivelAlcohol = nivelAlcohol + nivelChupito;
-                        System.out.println("Te quedan " + dineroCliente + "$ y tienes un nivel de alcohol de "
-                                + nivelAlcohol);
+                        if (dineroCliente < precioChupito) {
+                            System.out.println("\nNo tienes ni un CHAVO!! Vete al cajero o MÁRCHATE!!");
+                            salidaDisco = true;
+                        } else {
+                            System.out.println("\nAquí tienes tu chupito!! De un trago!!");
+                            dineroCliente = dineroCliente - precioChupito;
+                            nivelAlcohol = nivelAlcohol + nivelChupito;
+                            System.out.printf("Te quedan %.2f$ y tienes un nivel de alcohol de %.2f\n",
+                                    dineroCliente, nivelAlcohol);
+                        }
                     } else if (bebidaCliente.equalsIgnoreCase("cañas")) {
-                        System.out.println("\nAquí tienes tu caña fresquita!!");
-                        dineroCliente = dineroCliente - precioCanha;
-                        nivelAlcohol = nivelAlcohol + nivelCanha;
-                        System.out.println("Te quedan " + dineroCliente + "$ y tienes un nivel de alcohol de "
-                                + nivelAlcohol);
+                        if (dineroCliente < precioCanha) {
+                            System.out.println("\nNo tienes ni un CHAVO!! Vete al cajero o MÁRCHATE!!");
+                            salidaDisco = true;
+                        } else {
+                            System.out.println("\nAquí tienes tu caña fresquita!!");
+                            dineroCliente = dineroCliente - precioCanha;
+                            nivelAlcohol = nivelAlcohol + nivelCanha;
+                            System.out.printf("Te quedan %.2f$ y tienes un nivel de alcohol de %.2f\n",
+                                    dineroCliente, nivelAlcohol);
+                        }
                     } else if (bebidaCliente.equalsIgnoreCase("combinados")) {
-                        System.out.println("\nAquí tienes tu combinado!! Está un poco cargado!!");
-                        dineroCliente = dineroCliente - precioCombinado;
-                        nivelAlcohol = nivelAlcohol + nivelCombinado;
-                        System.out.println("Te quedan: " + dineroCliente + "$ y " +
-                                "tienes un nivel de alcohol de: " + nivelAlcohol);
+                        if (dineroCliente < precioCombinado) {
+                            System.out.println("\nNo tienes ni un CHAVO!! Vete al cajero o MÁRCHATE!!");
+                            salidaDisco = true;
+                        } else {
+                            System.out.println("\nAquí tienes tu combinado!! Está un poco cargado!!");
+                            dineroCliente = dineroCliente - precioCombinado;
+                            nivelAlcohol = nivelAlcohol + nivelCombinado;
+                            System.out.printf("Te quedan %.2f$ y tienes un nivel de alcohol de %.2f\n",
+                                    dineroCliente, nivelAlcohol);
+                        }
                     }
                 }
                 if (nivelAlcohol > 2) {
                     System.out.println("\nNo te mantienes de PIE!! Voy a llamar a una AMBULANCIA!!");
                 }
-                if (dineroCliente < 0) {
-                    System.out.println("\nNo tienes ni un CHAVO!! Vete al cajero o MÁRCHATE!!");
-                }
             }
-        }
-        if (edadCliente < 18) {
+        } else {
             System.out.println("\nNo tienes ni 18 años, vete a CASA a dormir NIÑO!!");
         }
     }

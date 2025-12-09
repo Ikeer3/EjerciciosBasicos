@@ -173,13 +173,38 @@ public class basicosRicoEstructurasRepetitivas {
         // El programa debe validar que las notas estén entre 0 y 10.
 
         Scanner lectorNotas = new Scanner(System.in);
-        String notas = "";
+        double notasUsuario;
+        double suma = 0;
+        int contador = 0;
+
+        System.out.println("");
 
         while (true) {
+            do {
+                System.out.print("Introduce las notas de la clase entre el 0 y el 10 " +
+                        "(cuando quieras parar escribe -1): ");
+                notasUsuario = lectorNotas.nextDouble();
+                if (notasUsuario == -1) {
+                    break;
+                }
+                if (notasUsuario < 0 || notasUsuario > 10) {
+                    System.out.println("\nERROR, la nota tiene que estar entre 0 y 10");
+                }
+            } while (notasUsuario < 0 || notasUsuario > 10);
 
-                System.out.print("\nIntroduce las notas de la clase, (cuando quieras parar escribe -1): ");
-                int notasUsuario = lectorNotas.nextInt();
-                notas = notas + notasUsuario;
+            if (notasUsuario == -1) {
+                break;
+            }
+            suma = suma + notasUsuario;
+            contador++;
+            System.out.println("Nota registrada. Llevas " + contador + " notas.");
+        }
+        if (contador > 0) {
+            double media = suma / contador;
+            System.out.println("\nHas introducido " + contador + " notas");
+            System.out.printf("La media final es: %.2f\n", media);
+        } else {
+            System.out.println("No se introdujeron notas válidas.");
         }
     }
 }
